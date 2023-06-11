@@ -153,5 +153,9 @@ class GameFragment : Fragment() {
      */
     private fun updateNextWordOnScreen() {
         binding.textViewUnscrambledWord.text = viewModel.currentScrambledWord
+        binding.score.text = getString(R.string.score, viewModel.score)
+        binding.wordCount.text = getString(
+            R.string.word_count, viewModel.currentWordCount, MAX_NO_OF_WORDS
+        )
     }
 }
